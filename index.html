@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="js/script.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container-notes">
+      <header>
+        <div class="title">
+          <h1><i class="fa-regular fa-clipboard"></i> Notas</h1>
+        </div>
+
+        <div class="search-bar">
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input type="text" id="search" />
+        </div>
+
+        <div class="toggle-theme">
+          <button id="toggle-theme"><i class="fa-solid fa-moon"></i></button>
+        </div>
+      </header>
+
+      <div class="add-note">
+        <input type="text" placeholder="Adicione a nota..." id="input-note" />
+        <div class="btn-add">
+          <button id="btn-add">+</button>
+        </div>
+      </div>
+
+      <div class="notes">
+        <!-- <div class="note">
+          <textarea name="note" id="note" placeholder="Escreva algo...">
+          </textarea>
+          <i class="fa-solid fa-trash"></i>
+
+          <i class="fa-solid fa-thumbtack"></i>
+
+          <i class="fa-regular fa-copy"></i>
+        </div> -->
+      </div>
+
+      <div class="windown-modal">
+        <div class="modal">
+          <div class="close-modal">
+            <button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <div class="title-modal">
+            <h2>Personalize Sua Nota!</h2>
+          </div>
+          <div class="edit-modal">
+            <p>Selecione a Cor da Nota:</p>
+            <input type="color" id="background-color" value="#92adea" />
+          </div>
+          <div class="edit-modal">
+            <p>Selecione o Tamanho da Fonte:</p>
+            <input type="range" id="font-size" min="10" max="30" value="14" />
+          </div>
+          <div class="edit-modal">
+            <p>Selecione a cor da Fonte:</p>
+            <input type="color" id="font-color" />
+          </div>
+          <div class="edit-modal">
+            <p>Selecione a cor do Contorno:</p>
+            <input type="color" id="shadow-color" value="#92adea" />
+          </div>
+          <div class="edit-modal">
+            <p>Selecione a largura da Nota:</p>
+            <input
+              type="range"
+              id="width-note"
+              min="100"
+              max="500"
+              value="250"
+            />
+          </div>
+          <div class="edit-modal">
+            <p>Selecione a altura da Nota:</p>
+            <input
+              type="range"
+              id="height-note"
+              min="100"
+              max="500"
+              value="200"
+            />
+          </div>
+
+          <div class="edit">
+            <button id="edit">Editar</button>
+          </div>
+        </div>
+
+        <div class="note-prev"></div>
+        <div class="note note-preview">
+          <textarea
+            name="note"
+            id="note-text"
+            placeholder="Escreva algo..."
+          ></textarea>
+          <i class="fa-solid fa-trash"></i>
+
+          <i class="fa-solid fa-thumbtack"></i>
+
+          <i class="fa-regular fa-copy"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
