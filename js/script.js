@@ -139,38 +139,47 @@ function duplicateNote(id) {
     id: generateId(),
   };
 
+  createNote(noteObj.id, noteObj.text, noteObj.fixed);
+  
+  notes.push(noteObj);
+  saveNotes(notes);
+
   const editedNotes = getEditNotes();
+  
   const duplicateEditNote = editedNotes.filter(
     (editNote) => editNote.id === id
   )[0];
 
-  const editNoteObj = {
-    backgroundColor: duplicateEditNote.backgroundColor,
-    fontSize: duplicateEditNote.fontSize,
-    fontColor: duplicateEditNote.fontColor,
-    borderColor: duplicateEditNote.borderColor,
-    widthNote: duplicateEditNote.widthNote,
-    heightNote: duplicateEditNote.heightNote,
-    id: noteObj.id,
-  };
+  if(duplicateEditNote != undefined){
+    const editNoteObj = {
+      backgroundColor: duplicateEditNote.backgroundColor,
+      fontSize: duplicateEditNote.fontSize,
+      fontColor: duplicateEditNote.fontColor,
+      borderColor: duplicateEditNote.borderColor,
+      widthNote: duplicateEditNote.widthNote,
+      heightNote: duplicateEditNote.heightNote,
+      id: noteObj.id,
+    };
+  
+    
+  
+    createEditNote(
+      editNoteObj.id,
+      editNoteObj.backgroundColor,
+      editNoteObj.fontSize,
+      editNoteObj.fontColor,
+      editNoteObj.borderColor,
+      editNoteObj.heightNote,
+      editNoteObj.widthNote
+    );
 
-  createNote(noteObj.id, noteObj.text, noteObj.fixed);
+    editedNotes.push(editNoteObj);
+    saveEditNotes(editedNotes);
+  }
+  
+  
+  
 
-  createEditNote(
-    editNoteObj.id,
-    editNoteObj.backgroundColor,
-    editNoteObj.fontSize,
-    editNoteObj.fontColor,
-    editNoteObj.borderColor,
-    editNoteObj.heightNote,
-    editNoteObj.widthNote
-  );
-
-  notes.push(noteObj);
-  editedNotes.push(editNoteObj);
-
-  saveNotes(notes);
-  saveEditNotes(editedNotes);
 }
 
 // atualizar o conteudo da textarea
