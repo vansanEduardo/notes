@@ -169,7 +169,7 @@ header {
 }
 
 .note:hover {
-  transform: scale(1.05) translateY(-5px);
+  transform: scale(1.02) translateY(-5px);
   box-shadow: var(--boxshadow-color);
 }
 
@@ -404,5 +404,35 @@ header {
   }
   .title-modal {
     position: relative;
+  }
+}
+
+
+@media (max-width: 500px){
+  .note{
+    max-width: 450px;
+  }
+  
+}
+@media (max-width: 450px){
+  .note{
+    max-width: 400px;
+  }
+  .modal{
+    width: 300px;
+  }
+  .edit-modal p{
+    font-size: 0.7rem;
+    text-align: center;
+  }
+}
+@media (max-width: 400px){
+  .note{
+    max-width: 350px;
+  }
+}
+@media (max-width: 350px){
+  .note{
+    max-width: 300px;
   }
 }

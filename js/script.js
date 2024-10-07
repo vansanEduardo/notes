@@ -18,7 +18,7 @@ const notePreview = document.querySelector(".note-preview");
 const containerNotePreview = document.querySelector(".note-prev");
 const toggleFontSize = document.querySelector("#font-size");
 const toggleFontColor = document.querySelector("#font-color");
-const toggleBorderColor = document.querySelector("#shadow-color");
+const toggleBorderColor = document.querySelector("#border-color");
 const btnEditNote = document.querySelector("#edit");
 const toggleWidthNote = document.querySelector("#width-note");
 const toggleHeightNote = document.querySelector("#height-note");
@@ -140,7 +140,7 @@ function duplicateNote(id) {
   };
 
   createNote(noteObj.id, noteObj.text, noteObj.fixed);
-  
+
   notes.push(noteObj);
   saveNotes(notes);
 
